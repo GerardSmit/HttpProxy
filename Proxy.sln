@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Proxy\Proxy.csproj", "{33B756F9-94FA-418A-8F7B-4D5765719085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy.Tests", "Proxy.Tests\Proxy.Tests.csproj", "{D8CC0255-8AFD-43E8-937F-DCDBE1E651C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33B756F9-94FA-418A-8F7B-4D5765719085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B756F9-94FA-418A-8F7B-4D5765719085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B756F9-94FA-418A-8F7B-4D5765719085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B756F9-94FA-418A-8F7B-4D5765719085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CC0255-8AFD-43E8-937F-DCDBE1E651C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CC0255-8AFD-43E8-937F-DCDBE1E651C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CC0255-8AFD-43E8-937F-DCDBE1E651C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CC0255-8AFD-43E8-937F-DCDBE1E651C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

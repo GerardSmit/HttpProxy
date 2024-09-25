@@ -1,0 +1,55 @@
+name: Publish
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  publish:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Setup zig
+        uses: goto-bus-stop/setup-zig@v2
+
+      - name: Publish and zip linux-x64
+        working-directory: ./Proxy
+        run: |
+          dotnet publish -c Release -r linux-x64 -o ./publish/linux-x64
+      
+      - name: Artifact linux-x64
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-x64
+          path: ./Proxy/publish/linux-x64
+
+      - name: Publish and zip linux-arm64
+        working-directory: ./Proxy
+        run: |
+          dotnet publish -c Release -r linux-arm64 -o ./publish/linux-arm64
+
+      - name: Artifact linux-arm64
+        uses: actions/upload-artifact@v4
+        with:
+          name: Proxy
+          path: ./Proxy/publish/linux-arm64
+
+      - name: Publish and zip win-x64
+        working-directory: ./Proxy
+        run: |
+          dotnet publish -c Release -r win-x64 -o ./publish/win-x64
+      
+      - name: Artifact win-x64
+        uses: actions/upload-artifact@v4
+        with:
+          name: win-x64
+          path: ./Proxy/publish/win-x64

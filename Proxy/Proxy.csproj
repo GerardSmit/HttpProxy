@@ -13,6 +13,13 @@
 
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">
         <PublishAot>true</PublishAot>
+        <DebugSymbols>False</DebugSymbols>
+        <DebugType>None</DebugType>
+        <StripSymbols>true</StripSymbols>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="PublishAotCross" Version="1.0.0" />
+    </ItemGroup>
 
 </Project>
